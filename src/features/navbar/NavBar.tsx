@@ -36,7 +36,7 @@ const NavBar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/">
+          <Link to="/about">
             <IoPersonOutline />
             <span>About</span>
           </Link>
