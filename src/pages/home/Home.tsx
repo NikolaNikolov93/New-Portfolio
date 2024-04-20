@@ -1,7 +1,8 @@
+import styles from "./Home.module.css";
 const Home = () => {
   return (
-    <div>
-      <h1>This is Home </h1>
+    <div className={styles["home"]}>
+      <img src="../../home.jpg" alt="" />
     </div>
   );
 };
