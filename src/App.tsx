@@ -1,7 +1,15 @@
+import "./App.css";
+import NavBar from "./features/navbar/NavBar.tsx";
+
 function App() {
   return (
     <>
-      <h1>hello world!</h1>
+      <div className="site">
+        <NavBar />
+        <div className="site-info">
+          <h1>hello world</h1>
+        </div>
+      </div>
     </>
   );
 }
