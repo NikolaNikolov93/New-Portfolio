@@ -4,13 +4,31 @@ import { CiFileOn } from "react-icons/ci";
 import { GiSpellBook } from "react-icons/gi";
 import { CiServer } from "react-icons/ci";
 import { CiMail } from "react-icons/ci";
+import { LuGithub } from "react-icons/lu";
+import { CiFacebook } from "react-icons/ci";
+import { CiLinkedin } from "react-icons/ci";
 import styles from "./NavBar.module.css";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <section className={styles["site-nav"]}>
-      <ul>
+    <section className={styles["header"]}>
+      <div className={styles["header-profile"]}>
+        <img src="../../cvp2.jpg" alt="" />
+        <span>Nikola Nikolov</span>
+        <ul>
+          <li>
+            <LuGithub />
+          </li>{" "}
+          <li>
+            <CiFacebook />
+          </li>
+          <li>
+            <CiLinkedin />
+          </li>
+        </ul>
+      </div>
+      <ul className={styles["nav"]}>
         <li>
           <Link to="/">
             <CiHome />
@@ -48,6 +66,7 @@ const NavBar = () => {
           </Link>
         </li>
       </ul>
+      <footer>&copy; Designed by Nikola Nikolov</footer>
     </section>
   );
 };

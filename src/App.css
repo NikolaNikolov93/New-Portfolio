@@ -1,6 +1,10 @@
 .site {
-  max-width: 1280px;
-  padding: 1em 1em;
+  max-width: 2000px;
   color: inherit;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.site-info {
+  flex-grow: 1;
 }
