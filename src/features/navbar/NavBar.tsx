@@ -15,7 +15,7 @@ const NavBar = () => {
     <section className={styles["header"]}>
       <div className={styles["header-profile"]}>
         <img src="../../cvp2.jpg" alt="" />
-        <span>Nikola Nikolov</span>
+        <h2>Nikola Nikolov</h2>
         <ul>
           <li>
             <LuGithub />
@@ -66,7 +66,9 @@ const NavBar = () => {
           </Link>
         </li>
       </ul>
-      <footer>&copy; Designed by Nikola Nikolov</footer>
+      <footer>
+        <span>&copy; Designed by Nikola Nikolov</span>
+      </footer>
     </section>
   );
 };
