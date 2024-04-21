@@ -1,4 +1,16 @@
-.home img {
-  height: 100vh;
-  aspect-ratio: 3/4;
+.home {
+  position: relative;
+  padding: 1em;
+  height: 100dvh;
+  background-position: center;
+  background-size: cover;
+  color: rgb(197, 197, 197);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 3em;
+}
+.home p {
+  margin-right: 0.3em;
 }
