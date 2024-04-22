@@ -4,7 +4,46 @@
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+}
+.site-nav {
+  flex: 0 1 25%;
+  transition: transform 0.8s ease;
 }
 .site-info {
-  flex-grow: 1;
+  flex: 1 1 auto;
+}
+.hamburger-menu {
+  padding: 1em;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  display: none;
+  right: 0;
+}
+.hamburger-menu-item {
+  height: 5px;
+  width: 30px;
+  background-color: rgb(197, 197, 197);
+}
+
+@media (max-width: 900px) {
+  .site-nav {
+    z-index: 99;
+    transform: translateX(-100%); /* Initially move off the screen */
+  }
+  .hamburger-menu {
+    display: inline-flex;
+    z-index: 50;
+  }
+  .site-info {
+    position: absolute;
+    right: 0;
+    left: 0;
+  }
+  .open {
+    z-index: 99;
+    transform: translateX(0); /* Slide in when .open class is applied */
+  }
 }
