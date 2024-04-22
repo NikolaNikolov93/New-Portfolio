@@ -1,0 +1,35 @@
+.about {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.detailed-info {
+  display: flex;
+  flex: 1 1 65%;
+  gap: 1em;
+}
+.detailed-info-img {
+  flex: 1 0 35%;
+  background-size: cover;
+  background-position: center;
+}
+.my-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.my-info > * {
+  flex-basis: 100%;
+}
+.my-info ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  height: 200px;
+  list-style: disc;
+  list-style-position: inside;
+}
+.ul-flex-item {
+  flex-basis: calc((100% - 1em) / 2);
+}
