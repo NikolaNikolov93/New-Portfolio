@@ -1,5 +1,19 @@
+import { useEffect } from "react";
 import styles from "./About.module.css";
+import { useHamburgerMenu } from "../../context/HamburgerMenuContext";
+
 const About = () => {
+  /**
+   *  Checks if hamburger menu is Open and closes is on page redirection from navigation
+   */
+  const { isOpen, setIsOpen } = useHamburgerMenu();
+
+  useEffect(() => {
+    if (isOpen) {
+      setIsOpen(false);
+    }
+  }, []);
+  /** End */
   return (
     <>
       <section className={styles["about"]}>

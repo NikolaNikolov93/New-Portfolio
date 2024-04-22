@@ -9,8 +9,14 @@ import { CiFacebook } from "react-icons/ci";
 import { CiLinkedin } from "react-icons/ci";
 import styles from "./NavBar.module.css";
 import { Link } from "react-router-dom";
+import { useHamburgerMenu } from "../../context/HamburgerMenuContext";
 
 const NavBar = () => {
+  const { isOpen, setIsOpen } = useHamburgerMenu();
+  /**
+   * Using hamburger context to check if navigation link is clicked --> close the navigtion bar
+   */
+
   return (
     <section className={styles["header"]}>
       <div className={styles["header-profile"]}>
@@ -30,37 +36,67 @@ const NavBar = () => {
       </div>
       <ul className={styles["nav"]}>
         <li>
-          <Link to="/">
+          <Link
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+            to="/"
+          >
             <CiHome />
             <span>Home</span>
           </Link>
         </li>
         <li>
-          <Link to="/about">
+          <Link
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+            to="/about"
+          >
             <IoPersonOutline />
             <span>About</span>
           </Link>
         </li>
         <li>
-          <Link to="/">
+          <Link
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+            to="/"
+          >
             <CiFileOn />
             <span>Resume</span>
           </Link>
         </li>{" "}
         <li>
-          <Link to="/">
+          <Link
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+            to="/"
+          >
             <GiSpellBook />
             <span>Portfolio</span>
           </Link>
         </li>{" "}
         <li>
-          <Link to="/">
+          <Link
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+            to="/"
+          >
             <CiServer />
             <span>Services</span>
           </Link>
         </li>{" "}
         <li>
-          <Link to="/">
+          <Link
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+            to="/"
+          >
             <CiMail />
             <span>Contact</span>
           </Link>
