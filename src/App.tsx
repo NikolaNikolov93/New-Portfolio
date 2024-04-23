@@ -17,9 +17,21 @@ function App() {
           }}
           className="hamburger-menu"
         >
-          <span className="hamburger-menu-item one"></span>
-          <span className="hamburger-menu-item two"></span>
-          <span className="hamburger-menu-item three"></span>
+          <span
+            className={
+              isOpen ? "hamburger-menu-item one" : "hamburger-menu-item"
+            }
+          ></span>
+          <span
+            className={
+              isOpen ? "hamburger-menu-item two" : "hamburger-menu-item"
+            }
+          ></span>
+          <span
+            className={
+              isOpen ? "hamburger-menu-item three" : "hamburger-menu-item"
+            }
+          ></span>
         </div>
         <div className={isOpen ? "site-nav open" : "site-nav"}>
           <NavBar />

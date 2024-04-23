@@ -10,12 +10,13 @@
   gap: 1em;
 }
 .detailed-info-img {
-  flex: 1 0 35%;
+  flex: 1 1 auto;
   background-size: cover;
   background-position: center;
 }
 .my-info {
   display: flex;
+  flex: 1 1 50%;
   flex-wrap: wrap;
   gap: 1em;
 }
@@ -26,10 +27,31 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
-  height: 200px;
   list-style: disc;
   list-style-position: inside;
 }
 .ul-flex-item {
   flex-basis: calc((100% - 1em) / 2);
+}
+@media (max-width: 1130px) {
+  .detailed-info {
+    flex-direction: column;
+  }
+  .detailed-info-img {
+    width: auto;
+    height: 80vh;
+  }
+}
+@media (max-width: 900px) {
+  .about {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 600px) {
+  .about {
+    font-size: 1.3em;
+  }
+  .ul-flex-item {
+    flex-basis: 100%;
+  }
 }

@@ -6,25 +6,26 @@
   flex-wrap: wrap;
   position: relative;
 }
+
 .site-nav {
   flex: 0 0 350px;
 }
 .site-info {
-  flex: 1 1 auto;
+  flex: 1 1 60%;
 }
 .hamburger-menu {
-  padding: 1em;
+  padding: 2em;
   position: absolute;
   display: flex;
   flex-direction: column;
-  gap: 0.3em;
+  gap: 0.4em;
   display: none;
   right: 0;
 }
 .hamburger-menu-item {
   height: 5px;
-  width: 30px;
-  background-color: rgb(197, 197, 197);
+  width: 40px;
+  background-color: rgb(168, 168, 168);
 }
 
 @media (max-width: 900px) {
@@ -38,6 +39,9 @@
     display: inline-flex;
     z-index: 50;
   }
+  .hamburger-menu-item {
+    transition: transform 0.8s ease;
+  }
   .site-info {
     position: absolute;
     right: 0;
@@ -46,5 +50,16 @@
   .open {
     z-index: 99;
     transform: translateX(0); /* Slide in when .open class is applied */
+  }
+
+  .one {
+    transform: rotate(45deg) translateY(17px);
+  }
+  .two {
+    opacity: 0;
+    transition: opacity 0.8s ease; /* Transition for opacity */
+  }
+  .three {
+    transform: rotate(-45deg) translateY(-17px);
   }
 }
