@@ -8,7 +8,7 @@ import { LuGithub } from "react-icons/lu";
 import { CiFacebook } from "react-icons/ci";
 import { CiLinkedin } from "react-icons/ci";
 import styles from "./NavBar.module.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useHamburgerMenu } from "../../context/HamburgerMenuContext";
 
 const NavBar = () => {
@@ -24,19 +24,37 @@ const NavBar = () => {
         <h2>Nikola Nikolov</h2>
         <ul>
           <li>
-            <LuGithub />
+            <a
+              href="https://github.com/NikolaNikolov93"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LuGithub />
+            </a>
           </li>{" "}
           <li>
-            <CiFacebook />
+            <a
+              href="https://www.facebook.com/nikola.nikolov.77"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CiFacebook />
+            </a>
           </li>
           <li>
-            <CiLinkedin />
+            <a
+              href="https://www.linkedin.com/in/nikola-nikolov-a53b2925a/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CiLinkedin />
+            </a>
           </li>
         </ul>
       </div>
       <ul className={styles["nav"]}>
         <li>
-          <Link
+          <NavLink
             onClick={() => {
               setIsOpen(!isOpen);
             }}
@@ -44,10 +62,10 @@ const NavBar = () => {
           >
             <CiHome />
             <span>Home</span>
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link
+          <NavLink
             onClick={() => {
               setIsOpen(!isOpen);
             }}
@@ -55,10 +73,10 @@ const NavBar = () => {
           >
             <IoPersonOutline />
             <span>About</span>
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link
+          <NavLink
             onClick={() => {
               setIsOpen(!isOpen);
             }}
@@ -66,10 +84,10 @@ const NavBar = () => {
           >
             <CiFileOn />
             <span>Resume</span>
-          </Link>
+          </NavLink>
         </li>{" "}
         <li>
-          <Link
+          <NavLink
             onClick={() => {
               setIsOpen(!isOpen);
             }}
@@ -77,10 +95,10 @@ const NavBar = () => {
           >
             <GiSpellBook />
             <span>Portfolio</span>
-          </Link>
+          </NavLink>
         </li>{" "}
         <li>
-          <Link
+          <NavLink
             onClick={() => {
               setIsOpen(!isOpen);
             }}
@@ -88,10 +106,10 @@ const NavBar = () => {
           >
             <CiServer />
             <span>Services</span>
-          </Link>
+          </NavLink>
         </li>{" "}
         <li>
-          <Link
+          <NavLink
             onClick={() => {
               setIsOpen(!isOpen);
             }}
@@ -99,7 +117,7 @@ const NavBar = () => {
           >
             <CiMail />
             <span>Contact</span>
-          </Link>
+          </NavLink>
         </li>
       </ul>
       <footer>
