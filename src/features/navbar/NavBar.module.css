@@ -26,6 +26,7 @@
   display: flex;
   align-items: center;
   gap: 0.2em;
+  transition: transform 0.5s ease;
 }
 
 .header-profile ul {
@@ -44,10 +45,16 @@
   gap: 0.5em;
   font-size: 1.8em;
 }
+.header-profile ul li {
+  transition: transform 0.5s ease;
+}
 .header-profile ul li:hover {
   transition: transform 0.5s ease;
   transform: scale(1.5);
+  color: white;
 }
-.active {
-  color: red;
+.nav .active {
+  color: white;
+  transform: scale(1.3);
+  transition: transform 0.5s ease;
 }

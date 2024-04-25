@@ -4,6 +4,19 @@
   flex-direction: column;
   gap: 2em;
   min-height: 100vh;
+  padding: 4em 3em;
+}
+.about h1 {
+  position: relative;
+}
+.about h1::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background-color: #82858b;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .detailed-info {
   display: flex;
@@ -28,11 +41,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
-  list-style: disc;
-  list-style-position: inside;
 }
 .ul-flex-item {
   flex-basis: calc((100% - 1em) / 2);
+}
+.ul-flex-item::before {
+  content: "›";
+  margin-right: 0.5em;
 }
 @media (max-width: 1130px) {
   .detailed-info {

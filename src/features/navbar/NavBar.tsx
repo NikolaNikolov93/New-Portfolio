@@ -59,6 +59,9 @@ const NavBar = () => {
               setIsOpen(!isOpen);
             }}
             to="/"
+            className={({ isActive, isPending }) =>
+              isPending ? styles["pending"] : isActive ? styles["active"] : ""
+            }
           >
             <CiHome />
             <span>Home</span>
@@ -70,6 +73,9 @@ const NavBar = () => {
               setIsOpen(!isOpen);
             }}
             to="/about"
+            className={({ isActive, isPending }) =>
+              isPending ? styles["pending"] : isActive ? styles["active"] : ""
+            }
           >
             <IoPersonOutline />
             <span>About</span>
@@ -80,7 +86,10 @@ const NavBar = () => {
             onClick={() => {
               setIsOpen(!isOpen);
             }}
-            to="/"
+            to="/resume"
+            className={({ isActive, isPending }) =>
+              isPending ? styles["pending"] : isActive ? styles["active"] : ""
+            }
           >
             <CiFileOn />
             <span>Resume</span>
@@ -91,7 +100,10 @@ const NavBar = () => {
             onClick={() => {
               setIsOpen(!isOpen);
             }}
-            to="/"
+            to="/portfolio"
+            className={({ isActive, isPending }) =>
+              isPending ? styles["pending"] : isActive ? styles["active"] : ""
+            }
           >
             <GiSpellBook />
             <span>Portfolio</span>
@@ -102,7 +114,10 @@ const NavBar = () => {
             onClick={() => {
               setIsOpen(!isOpen);
             }}
-            to="/"
+            to="/services"
+            className={({ isActive, isPending }) =>
+              isPending ? styles["pending"] : isActive ? styles["active"] : ""
+            }
           >
             <CiServer />
             <span>Services</span>
@@ -113,7 +128,10 @@ const NavBar = () => {
             onClick={() => {
               setIsOpen(!isOpen);
             }}
-            to="/"
+            to="/contact"
+            className={({ isActive, isPending }) =>
+              isPending ? styles["pending"] : isActive ? styles["active"] : ""
+            }
           >
             <CiMail />
             <span>Contact</span>
