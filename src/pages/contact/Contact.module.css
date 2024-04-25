@@ -46,7 +46,7 @@
   gap: 1em;
   flex-basis: 60%;
   justify-content: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add your desired shadow properties */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .contacts-form :nth-child(1),
 .contacts-form :nth-child(2) {
@@ -67,6 +67,11 @@
   transition: transform 0.5s ease;
   transform: scale(1.1);
   color: white;
+  background-color: #383a3d;
+}
+.button:active {
+  transition: transform 0.5s ease;
+  transform: scale(1);
 }
 textarea {
   width: 100%;
