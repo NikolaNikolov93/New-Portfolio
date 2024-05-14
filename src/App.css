@@ -38,6 +38,7 @@
   .hamburger-menu {
     display: inline-flex;
     z-index: 50;
+    position: fixed;
   }
   .hamburger-menu-item {
     transition: transform 0.8s ease;
@@ -50,6 +51,7 @@
   .open {
     z-index: 99;
     transform: translateX(0); /* Slide in when .open class is applied */
+    flex: 0 0 350px;
   }
 
   .one {
